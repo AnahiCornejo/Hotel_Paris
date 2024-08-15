@@ -12,46 +12,61 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background-color: #4B1E32;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         nav {
             text-align: center;
             background-color: #711A3F;
             padding: 10px;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
             color: #F4E1D2;
         }
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
             overflow: hidden;
         }
+
         .section {
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .section h2 {
             margin-bottom: 20px;
             color: #4B1E32;
+            font-size: 2em;
         }
-        .rooms, .services {
+
+        .rooms, .services, .gallery {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        .room, .service {
+
+        .room, .service, .gallery-item {
             background-color: white;
             margin: 10px;
             padding: 20px;
@@ -59,26 +74,32 @@
             width: 30%;
             box-sizing: border-box;
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .room h3, .service h3 {
-            color: #711A3F;
+
+        .room:hover, .service:hover, .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
         footer {
             background-color: #4B1E32;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 20px 0;
         }
+
         .contact-options {
             text-align: center;
             margin: 30px 0;
         }
+
         .contact-options p {
             font-size: 1.2em;
             color: #4B1E32;
             margin-bottom: 20px;
         }
+
         .button {
             display: inline-flex;
             align-items: center;
@@ -90,40 +111,51 @@
             margin: 10px;
             transition: background-color 0.3s ease;
         }
+
         .button img {
             height: 24px;
             margin-right: 10px;
         }
+
         .button.facebook {
             background-color: #3b5998;
         }
+
         .button.facebook:hover {
             background-color: #2d4373;
         }
+
         .button.whatsapp {
             background-color: #25d366;
         }
+
         .button.whatsapp:hover {
             background-color: #1ebe52;
         }
+
         .button.call {
             background-color: #007bff;
         }
+
         .button.call:hover {
             background-color: #0056b3;
         }
+
         .button.instagram {
             background-color: #E1306C;
         }
+
         .button.instagram:hover {
             background-color: #C13584;
         }
+
         @media (max-width: 768px) {
-            .rooms, .services {
+            .rooms, .gallery {
                 flex-direction: column;
                 align-items: center;
             }
-            .room, .service {
+
+            .room, .service, .gallery-item {
                 width: 90%;
             }
         }
@@ -179,125 +211,31 @@
             </div>
         </section>
 
-        <section id="gallery" class="section">
-            <h2>Galería</h2>
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="https://scontent.fmex45-1.fna.fbcdn.net/v/t39.30808-6/305465019_520084753450625_5877418553847042405_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE_gruYtPEN9EwidLVkuDUyv8yAvAgz1ji_zIC8CDPWOAOnhOteSmawa7BSZ-Kp_f_9zRkrSR5K2q5Qvol6Oi5h&_nc_ohc=9oV2ztI0IjkQ7kNvgEeybm2&_nc_ht=scontent.fmex45-1.fna&oh=00_AYDoVcMGuHSgru52KBQc5eaK6OcMv9EsA0esW_BEMZ270A&oe=66B2339F" alt="Publicidad 1" class="ad">
+        <section id="gallery" class="section" style="padding: 0;">
+            <h2 style="text-align: center;">Galería</h2>
+            <div class="gallery-container" style="overflow-x: auto; white-space: nowrap; padding: 0; -webkit-overflow-scrolling: touch;">
+                <div class="gallery" style="display: inline-flex; flex-wrap: nowrap;">
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="rosa 1.jpg" alt="Galería 1" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="rosa 2.jpg" alt="Galería 2" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="rosa 3.jpg" alt="Galería 3" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="Azul 1.jpg" alt="Galería 4" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="azul2.jpg" alt="Galería 5" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
+                        <img src="azul3.jpg" alt="Galería 6" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                </div>
             </div>
-            <div class="carousel-slide">
-                <img src="https://scontent.fmex45-1.fna.fbcdn.net/v/t39.30808-6/363350748_776806521111779_7017673132583058657_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHJBj55wsCMdTKayYU880AlqTNdE7DmDZKpM10TsOYNktie9AjAE2vFK6SG7GhbcceSJRm2-8Sfgz0Znz6PIRfO&_nc_ohc=DofLbIZUeHEQ7kNvgHh2WHf&_nc_ht=scontent.fmex45-1.fna&oh=00_AYDHB_BwBgZaGq5_4kuSvUM66dI4kV9vU759OT1i0Qy-aQ&oe=66B25A64" alt="Publicidad 2" class="ad">
-            </div>
-        </div>
-        <div class="nav">
-            <button class="prev">&lt;</button>
-            <div class="indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-            </div>
-            <button class="next">&gt;</button>
-        </div>
-    </div>
-</section>
-
-<style>
-    .carousel-container {
-        position: relative;
-        max-width: 100%;
-        margin: auto;
-        overflow: hidden;
-    }
-
-    .carousel {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-slide {
-        min-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .carousel-slide img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-        padding: 0 10px;
-    }
-
-    .prev, .next {
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .indicators {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .indicator.active {
-        background-color: white;
-    }
-</style>
-
-<script>
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const indicators = document.querySelectorAll('.indicator');
-    let currentIndex = 0;
-
-    function updateCarousel(index) {
-        carousel.style.transform = `translateX(-${index * 100}%)`;
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === index);
-        });
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-        updateCarousel(currentIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-        updateCarousel(currentIndex);
-    });
-
-    indicators.forEach((indicator, i) => {
-        indicator.addEventListener('click', () => {
-            currentIndex = i;
-            updateCarousel(currentIndex);
-        });
-    });
-</script>
-
+        </section>
         <section id="contact" class="section">
             <p>Selecciona una de las siguientes opciones para contactarnos o seguirnos:</p>
             
@@ -311,17 +249,11 @@
                 Hotel Paris en WhatsApp
             </a>
         
-            <a href="tel:+5561959967" class="button call">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Phone_icon.png" alt="Phone Icon">
-                Llamar al Hotel Paris
-            </a>
-        
             <a href="https://www.instagram.com/hotel.paris_?igsh=MXRjN2JsNzlibm1xeQ==" target="_blank" class="button instagram">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
                 Visitar Instagram
             </a>
         </section>
-
     </div>
 
     <footer>
