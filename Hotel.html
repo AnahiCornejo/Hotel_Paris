@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Imágenes</title>
     <style>
-
-
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -14,39 +23,49 @@
             justify-content: center;
         }
         .gallery-item {
-            flex: 1 1 calc(33.333% - 10px); /* Tres columnas con espacio entre ellas */
+            flex: 1 1 calc(33.333% - 10px);
             box-sizing: border-box;
         }
-
         .gallery-item img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px; /* Opcional: para bordes redondeados */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
         @media (max-width: 768px) {
             .gallery-item {
-                flex: 1 1 calc(50% - 10px); /* Dos columnas en pantallas pequeñas */
+                flex: 1 1 calc(50% - 10px);
             }
         }
         @media (max-width: 480px) {
             .gallery-item {
-                flex: 1 1 100%; /* Una columna en pantallas muy pequeñas */
+                flex: 1 1 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="habi_Hotel/Cafe.jpg" alt="EX 1">
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="gallery-item">
+                    <img src="habi_Hotel/Cafe.jpg" alt="Café">  
+            </div>
+            <div class="gallery-item">
+                <img src="habi_Hotel/vino.jpg" alt="Vino">
+            </div>
+            <div class="gallery-item">
+                <img src="habi_Hotel/Cafe2.jpg" alt="Café 2">
+            </div>
+            <div class="gallery-item">
+                <img src="habi_Hotel/Cuar_abuela.jpg" alt="Cuarto de la abuela">
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="habi_Hotel/vino.jpg" alt="EX 1">
-        </div>
-        <div class="gallery-item">
-            <img src="habi_Hotel/Cuar_abuela.jpg" alt="EX 1">
     </div>
 </body>
 </html>
-
