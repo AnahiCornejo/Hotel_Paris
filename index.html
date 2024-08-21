@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Paris</title>
     <style>
+        /* Box-sizing reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -71,7 +76,7 @@
             margin: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
+            width: calc(33.333% - 20px);
             box-sizing: border-box;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,7 +162,7 @@
             }
 
             .room, .service, .gallery-item {
-                width: 90%;
+                width: calc(100% - 20px);
             }
         }
     </style>
@@ -182,6 +187,7 @@
         <a href="#rooms">Habitaciones</a>
         <a href="#gallery">Galería</a>
         <a href="#contact">Contacto</a>
+        <a href="#ubi">Ubicación</a>
     </nav>
 
     <div class="container">
@@ -193,8 +199,8 @@
                     <p>Conéctate a nuestra red.</p>
                 </div>
                 <div class="service">
-                    <h3>Tienda.</h3>
-                    <p>Servicos de productos basicos a la habitación.</p>
+                    <h3>Tienda</h3>
+                    <p>Servicios de productos básicos a la habitación.</p>
                 </div>
             </div>
         </section>
@@ -203,42 +209,62 @@
             <h2>Habitaciones</h2>
             <div class="rooms">
                 <div class="room" onclick="redirectToPage('motel')">
-                    <h3>Motel.</h3>
+                    <h3>Motel</h3>
                     <p>Espacio cómodo para dos personas con todas las comodidades necesarias.</p>
                 </div>
                 <div class="room" onclick="redirectToPage('hotel')">
-                    <h3>Hotel.</h3>
+                    <h3>Hotel</h3>
                     <p>Perfecto para descansar y cuenta con todas las comodidades necesarias para sentirte como en casa.</p>
                 </div>
             </div>
         </section>
 
         <section id="gallery" class="section">
-            <h2 style="text-align: center;">Galería</h2>
+            <h2>Galería</h2>
             <div class="gallery-container" style="overflow-x: auto; white-space: nowrap; padding: 0; -webkit-overflow-scrolling: touch;">
                 <div class="gallery" style="display: inline-flex; flex-wrap: nowrap;">
                     <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
-                        <img src="habitaciones/rosa 1.jpg" alt="Galería 1" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                        <img src="habi_Hotel/torre.jpg" alt="Galería 1" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
                     <div class="gallery-item" style="display: inline-block; margin-right: 10px; flex: 0 0 auto;">
-                        <img src="habitaciones/rosa 2.jpg" alt="Galería 2" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                        <img src="habi_Hotel/Decoracion.jpg" alt="Galería 2" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ubi" class="section">
+            <h2>Ubicación</h2>
+            <p>Encuéntranos en la siguiente dirección:</p>
+            <p><strong>Av. Vicente Guerrero 5, Centro, 1ra Demarcación Poniente, 42700 Mixquiahuala, Hgo.</strong></p>
+
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="https://www.google.com.mx/maps/place/HOTEL+PARIS/@20.2306137,-99.2205897,17z/data=!3m1!4b1!4m9!3m8!1s0x85d3d7bf415bda35:0x5522826f541087a2!5m2!4m1!1i2!8m2!3d20.2306137!4d-99.2180148!16s%2Fg%2F11r97nx97r?entry=ttu" target="_blank">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipMCL0UKXSHFXk0htBivi2TqP7Gc2bT2WXT7fEZo=w408-h544-k-no" alt="Google Maps" style="max-width: 100%; height: auto; display: block; border-radius: 10px; max-height: 400px;">
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="https://www.google.com.mx/maps/place/HOTEL+PARIS/@20.2306137,-99.2205897,17z/data=!3m1!4b1!4m9!3m8!1s0x85d3d7bf415bda35:0x5522826f541087a2!5m2!4m1!1i2!8m2!3d20.2306137!4d-99.2180148!16s%2Fg%2F11r97nx97r?entry=ttu" class="button location" target="_blank" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">
+                    Ver en Google Maps
+                </a>
             </div>
         </section>
 
         <section id="contact" class="section">
+            <h2>Contacto</h2>
             <p>Selecciona una de las siguientes opciones para contactarnos o seguirnos:</p>
-            
+
             <a href="https://www.facebook.com/HOTELPARISMIX" target="_blank" class="button facebook">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
                 Visitar Página de Facebook
             </a>
-            
+
             <a href="https://wa.me/5561959967?text=Hola,%20quiero%20más%20información%20sobre%20las%20habitaciones%20y%20los%20precios%20del%20Hotel%20Paris." target="_blank" class="button whatsapp">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
                 Hotel Paris en WhatsApp
             </a>
-        
+
             <a href="https://www.instagram.com/hotel.paris_?igsh=MXRjN2JsNzlibm1xeQ==" target="_blank" class="button instagram">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
                 Visitar Instagram
