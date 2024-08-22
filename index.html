@@ -173,14 +173,17 @@
         }
     </style>
     <script>
-        function redirectToPage(roomType) {
-            if (roomType === 'motel') {
+        function redirectToPage(page) {
+            if (page === 'motel') {
                 window.location.href = 'Motel.html';
-            } else if (roomType === 'hotel') {
+            } else if (page === 'hotel') {
                 window.location.href = 'Hotel.html';
+            } else if (page === 'tienda') {
+                window.location.href = 'Tienda.html';
             }
         }
     </script>
+
 </head>
 <body>
     <header>
@@ -202,13 +205,13 @@
         <section id="services" class="section">
             <h2>Servicios</h2>
             <div class="services">
+                <div class="service" onclick="redirectToPage('tienda')">
+                    <h3>Tienda</h3>
+                    <p>Servicios de productos básicos a la habitación.</p>
+                </div>
                 <div class="service">
                     <h3>Wi-Fi gratuito</h3>
                     <p>Conéctate a nuestra red.</p>
-                </div>
-                <div class="service">
-                    <h3>Tienda</h3>
-                    <p>Servicios de productos básicos a la habitación.</p>
                 </div>
             </div>
         </section>
